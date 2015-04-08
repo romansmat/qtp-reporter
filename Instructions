@@ -1,5 +1,57 @@
-Instructions: Each test should start by calling the testStarted function. Each test should end by calling the testFinished function. Each action should start by calling the actionStarted function. Each action should end by calling the actionFinished function.
+Instructions: 
+A test suite (solution - collection of tests) should start by calling the reporter_GenerateFile function.
+A test suite (solution - collection of tests) should end by calling the reporter_FinalizeFile function.
+Each test should start by calling the testStarted function. 
+Each test should end by calling the testFinished function. 
+Each action should start by calling the actionStarted function. 
+Each action should end by calling the actionFinished function.
+E.g.
+Test Suite Porject
+    Test Case 01
+        Action 01_1
+            reporter_GenerateFile
+            testStarted
+            actionStarted
+            ...
+            <your code goes here>
+            ...
+            actionFinished
+        Action 01_2
+            actionStarted
+            ...
+            <your code goes here>
+            ...
+            actionFinished
+        ...
+        Action 01_xxx
+            actionStarted
+            ...
+            <your code goes here>
+            ...
+            actionFinished
+            testFinished
+    Test Case 02
+        Action 02_1
+            testStarted
+            actionStarted
+            ...
+            <your code goes here>
+            ...
+            actionFinished
+        ...
+    ...
+    Test Case yyy
+        ...
+        Action yyy_zzz
+            actionStarted
+            ...
+            <your code goes here>
+            ...
+            actionFinished
+            testFinished
+            reporter_FinalizeFile
 
+Assertions - Verifications
 The following verification (assertion) functions are used:
 
 verificationPassed (verificationMessage) - Use this function to assert a successful checkpoint. Provide a message to be tracked in the report file. Also triggers the micPass event of QTP.
